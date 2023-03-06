@@ -53,8 +53,8 @@ function App() {
 
           <div className=" ml-[4vw] w-2/4 h-[219px]  ">
             <h1 className="text-[2.3vw] font-[600] leading-[55px] font-[montserrat]">
-              Think Tankul care sustine dezvoltarea agriculturii sustenabile si
-              performate.
+              <span className="text-[#95D80A]">Think</span><span className="text-[#04A6E1] ml-[15px]">Tankul</span>  care sustine dezvoltarea agriculturii sustenabile si
+              performante.
 
             </h1>
             <div className="mt-[20px]">

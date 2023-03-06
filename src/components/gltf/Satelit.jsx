@@ -13,7 +13,7 @@ export default function Satelit(props) {
     if (!satelit.current) {
         return;
     }
-    satelit.current.rotation.y += 0.02;
+    satelit.current.rotation.y += 0.008;
     // satelit.current.rotation.x += 0.001;
     // baza.current.rotation.z += 0.009;
     // aripi.current.rotation.z += 0.009;
