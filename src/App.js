@@ -1,4 +1,7 @@
 import logo from "./assets/logo.png";
+import {motion} from "framer-motion"
+
+import {CgArrowLongRight} from "react-icons/cg";
 
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
@@ -10,15 +13,15 @@ function App() {
   return (
     <div className="h-max flex flex-col min-h-[100vh] w-[100%] bg-red-200">
       <div className="w-full h-[100vh] bg-[#EFFFFB]">
-        <nav className="fixed top-0 w-full flex h-[10vh] min-h-[80px] bg-[#EFFFFB] shadow-md justify-between items-center">
-          <div className="px-[25px] h-[50px] w-[300px] flex justify-center items-center ml-[10px]">
-            <img src={logo} alt="logo_agroinnovator" />
+        <nav className="z-20 fixed top-0 w-full flex h-[10vh] min-h-[80px] bg-[#EFFFFB] shadow-md justify-between items-center">
+          <div className="px-[25px] h-full w-1/2 flex justify-start items-center ml-[1.2vw] ">
+            <img className="h-1/2" src={logo} alt="logo_agroinnovator" />
           </div>
-          <div className="h-full flex justify-between items-center w-1/4 mr-[35px] text-[17px]">
-            <a href="/">Membrii</a>
-            <a href="/">Proiecte</a>
-            <a href="/">Noutati</a>
-            <a href="/">Contact</a>
+          <div className="h-full flex justify-between items-center w-1/4 mr-[1.5vw] text-[1.1vw]">
+            <motion.a href="/" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Membrii</motion.a>
+            <motion.a href="/" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Proiecte</motion.a>
+            <motion.a href="/" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Noutati</motion.a>
+            <motion.a href="/" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Contact</motion.a>
           </div>
         </nav>
         <svg
@@ -52,20 +55,22 @@ function App() {
         <div className=" w-full h-[100vh] flex  items-center justify-center ">
 
           <div className=" ml-[4vw] w-2/4 h-[219px]  ">
-            <h1 className="text-[2.3vw] font-[600] leading-[55px] font-[montserrat]">
+            <h1 className="text-[2.3vw] font-[600] leading-[3.5vw] font-[montserrat]">
               <span className="text-[#95D80A]">Think</span><span className="text-[#04A6E1] ml-[15px]">Tankul</span>  care sustine dezvoltarea agriculturii sustenabile si
               performante.
 
             </h1>
-            <div className="mt-[20px]">
-              <a className="font-montserrat font-normal text-[1.2vw]" href="/">
+            <div className="mt-[1.4vw]">
+              
+              <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.9 }} className="w-max hover:font-semibold font-montserrat font-normal text-[1.3vw] flex items-center justify-start" href="/">
+                <CgArrowLongRight className="mr-[1vw]"/>
                 Misiune & Viziune
-              </a>
+              </motion.a>
             </div>
           </div>
 
-          <div className="w-1/3 h-[400px] mb-[100px]">
-          <Canvas camera={{position: [2,-10,10], fov: 10, near: 1, eyeX: 10}} >
+          <div className="w-1/3 h-2/4 mb-[100px] bg-[#EFFFFB]">
+          <Canvas camera={{position: [2,-10,10], fov: 10, near: 1, eyeX: 10}}>
             <Suspense>
               <directionalLight position={[0,-5,0]} intensity={3}/>
               <ambientLight position={[0, 0, 0]} intensity={0.5} />
