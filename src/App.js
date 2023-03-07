@@ -43,8 +43,9 @@ function App() {
       .from(
         "#satelit",
         {
+          y:-100,
           x:150,
-          duration: 2,
+          duration: 1,
           ease: "power1",
         },
         "<"
