@@ -67,6 +67,7 @@ function App() {
                 trigger: element,
                 scrub: true,
                 pin: true,
+                // markers:true,
                 start: "center center",
                 //start: "top top",
                 end: "bottom top",
@@ -208,7 +209,24 @@ function App() {
             </div>
           </div>
         </div>
-        <div className=" membrii h-[60vh] w-[80vw] bg-red-200 invisible z-[0]">Membrii</div>
+        <div 
+          ref={(element) => {
+            const TL = gsap.timeline({
+              scrollTrigger: {
+                trigger: element,
+                scrub: true,
+                pin: true,
+                markers:true,
+                start: "center-=24% center",
+                //start: "top top",
+                end: "bottom top",
+                //end:"bottom-=600 top"
+  
+              },
+            });
+            TL.to("#satelit", {})
+          }}
+        className=" membrii h-[60vh] w-[80vw] bg-red-200 invisible z-[0]">Membrii</div>
       </div>
 
       <div
