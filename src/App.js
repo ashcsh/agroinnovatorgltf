@@ -145,6 +145,7 @@ function App() {
             </div>
 
             <div
+            id="satelit"
               className="w-1/3 h-2/4 mb-[100px] bg-[#EFFFFB] invisible"
             >
               <Canvas
