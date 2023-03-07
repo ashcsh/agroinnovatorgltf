@@ -21,30 +21,34 @@ function App() {
       autoAlpha: 1,
       duration: 2,
       ease: "power1.out",
-      stagger:{each: 0.2}
+      stagger: { each: 0.2 },
     })
-    .from("#munti", {
-      y:100,
-      duration:1,
-    }, "<")
-    .to(
-      "#satelit",
-      {
-        autoAlpha:1,
-        duration: 2,
-        ease: "power1",
-      },
-      "<"
-    )
-    .from(
-      "#satelit",
-      {
-        x:-50,
-        duration: 2,
-        ease: "power1",
-      },
-      "<"
-    );
+      .from(
+        "#munti",
+        {
+          y: 100,
+          duration: 1,
+        },
+        "<"
+      )
+      .to(
+        "#satelit",
+        {
+          autoAlpha: 1,
+          duration: 2,
+          ease: "power1",
+        },
+        "<"
+      )
+      .from(
+        "#satelit",
+        {
+          x:150,
+          duration: 2,
+          ease: "power1",
+        },
+        "<"
+      );
   }, []);
   return (
     <div className="h-max flex flex-col min-h-[100vh] w-[100%] bg-red-200">
@@ -119,39 +123,42 @@ function App() {
             />
           </svg>
         </div>
-
-        <div className=" w-full h-[100vh] flex  items-center justify-center ">
-          <div className=" ml-[4vw] w-2/4 h-[219px]  ">
-            <h1 className="text-[2.3vw] font-[600] leading-[3.5vw] font-[montserrat]">
-              <span className="text-[#95D80A]">Think</span>
-              <span className="text-[#04A6E1] ml-[15px]">Tankul</span> care
-              sustine dezvoltarea agriculturii sustenabile si performante.
-            </h1>
-            <div className="mt-[1.4vw]">
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-max hover:font-semibold font-montserrat font-normal text-[1.3vw] flex items-center justify-start"
-                href="/"
-              >
-                <CgArrowLongRight className="mr-[1vw]" />
-                Misiune & Viziune
-              </motion.a>
+        <div className="">
+          <div className=" w-[full] h-[100vh] flex  items-center justify-center bg-black ">
+            <div className=" ml-[4vw] w-2/4 h-[219px]  ">
+              <h1 className="text-[2.3vw] font-[600] leading-[3.5vw] font-[montserrat]">
+                <span className="text-[#95D80A]">Think</span>
+                <span className="text-[#04A6E1] ml-[15px]">Tankul</span> care
+                sustine dezvoltarea agriculturii sustenabile si performante.
+              </h1>
+              <div className="mt-[1.4vw]">
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-max hover:font-semibold font-montserrat font-normal text-[1.3vw] flex items-center justify-start"
+                  href="/"
+                >
+                  <CgArrowLongRight className="mr-[1vw]" />
+                  Misiune & Viziune
+                </motion.a>
+              </div>
             </div>
-          </div>
 
-          <div id="satelit" className="w-1/3 h-2/4 mb-[100px] bg-[#EFFFFB] invisible">
-            <Canvas
-              camera={{ position: [2, -10, 10], fov: 10, near: 1, eyeX: 10 }}
+            <div
+              className="w-1/3 h-2/4 mb-[100px] bg-[#EFFFFB] invisible"
             >
-              <Suspense>
-                <directionalLight position={[0, -5, 0]} intensity={3} />
-                <ambientLight position={[0, 0, 0]} intensity={0.5} />
-                {/* <pointLight position={[1000,-100,-1000]} intensity={1}/> */}
-                <Satelit />
-                <OrbitControls enableRotate={false} enableZoom={false} />
-              </Suspense>
-            </Canvas>
+              <Canvas
+                camera={{ position: [2, -10, 10], fov: 10, near: 1, eyeX: 10 }}
+              >
+                <Suspense>
+                  <directionalLight position={[0, -5, 0]} intensity={3} />
+                  <ambientLight position={[0, 0, 0]} intensity={0.5} />
+                  {/* <pointLight position={[1000,-100,-1000]} intensity={1}/> */}
+                  <Satelit />
+                  <OrbitControls enableRotate={false} enableZoom={false} />
+                </Suspense>
+              </Canvas>
+            </div>
           </div>
         </div>
       </div>
