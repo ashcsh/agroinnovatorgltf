@@ -23,7 +23,8 @@ function App() {
         "#munti",
         {
           y: "50%",
-          duration: 1,
+          duration: 0.7,
+          ease:"Power4.out"
         },
         "<"
       )
