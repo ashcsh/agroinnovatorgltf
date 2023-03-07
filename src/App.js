@@ -124,7 +124,7 @@ function App() {
           </svg>
         </div>
         <div className="">
-          <div className=" w-[full] h-[100vh] flex  items-center justify-center bg-black ">
+          <div className=" w-[full] h-[100vh] flex  items-center justify-center">
             <div className=" ml-[4vw] w-2/4 h-[219px]  ">
               <h1 className="text-[2.3vw] font-[600] leading-[3.5vw] font-[montserrat]">
                 <span className="text-[#95D80A]">Think</span>
