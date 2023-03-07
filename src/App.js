@@ -35,6 +35,15 @@ function App() {
         ease: "power1",
       },
       "<"
+    )
+    .from(
+      "#satelit",
+      {
+        x:-50,
+        duration: 2,
+        ease: "power1",
+      },
+      "<"
     );
   }, []);
   return (
