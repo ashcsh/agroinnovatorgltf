@@ -135,7 +135,7 @@ function App() {
 
           <div className="h-max w-max  ">
             <svg
-              id=""
+              id="munti"
               className="fixed bottom-0 w-full  "
               viewBox="0 0 1512 212"
               fill="none"
